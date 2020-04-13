@@ -8,3 +8,14 @@ class Solution:
                 nums[i + 1] = nums[j]
                 i += 1
         return nums[:i + 1]
+
+
+if __name__ == '__main__':
+    sol = Solution()
+    nums1 = [1, 1, 2]
+    nums2 = [0, 0, 1]
+    nums3 = [1]
+
+    assert sol.removeDuplicates(nums1) == [1, 2]
+    assert sol.removeDuplicates(nums2) == [0, 1]
+    assert sol.removeDuplicates(nums3) == [1]
