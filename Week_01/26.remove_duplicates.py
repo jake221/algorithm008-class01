@@ -5,6 +5,6 @@ class Solution:
         i = 0
         for j in range(len(nums)):
             if nums[i] != nums[j]:
-                nums[i+1] = nums[j]
+                nums[i + 1] = nums[j]
                 i += 1
-        return nums[:i+1]
+        return nums[:i + 1]
