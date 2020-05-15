@@ -11,7 +11,6 @@ class Solution:
     def _generate(self, left: int, right: int, num_par: int, s: str, res: list):
         if (left == num_par) and (right == num_par):
             res.append(s)
-            return s
         # 添加左括号的条件：左括号个数小于num_par
         if left < num_par:
             self._generate(left + 1, right, num_par, s + "(", res)
