@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'jack'
 
-
+# https://leetcode-cn.com/problems/combinations/
 class Solution:
     def combine(self, n: int, k: int):
         res = []
