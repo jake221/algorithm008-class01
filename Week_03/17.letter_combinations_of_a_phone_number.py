@@ -4,8 +4,10 @@ __author__ = 'jack'
 
 class Solution:
     def letterCombinations(self, digits: str):
-        # TODO: 有效性判断
         res = []
+
+        if len(digits) == 0:
+            return res
 
         dic = {'2': 'abc',
                '3': 'def',
