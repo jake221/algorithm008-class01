@@ -15,12 +15,15 @@ class Solution:
 
     def fib2(self, N: int) -> int:
         # 2. memory search
-        mem = [0 for i in range(31)]
-        if N <= 1:
-            return N
-        else:
-            mem[N] = self.fib2(N - 1) + self.fib2(N - 2)
-        return mem[N]
+        self.mem = [-1 for _ in range(N + 1)]
+        return self._helper(N)
+
+    def _helper(self, n):
+        if n <= 1:
+            return n
+        if self.mem[n] == -1:
+            self.mem[n] = self._helper(n - 1) + self._helper(n - 2)
+        return self.mem[n]
 
 
 solver = Solution()
